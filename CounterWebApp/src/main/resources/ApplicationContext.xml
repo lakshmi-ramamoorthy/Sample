@@ -13,10 +13,10 @@
 
 	<context:component-scan base-package="com.mindtree.mwatch" />
 
-	<bean id="testRouteBuilder" class="com.mindtree.mwatch.test.TestRouteBuilder" />
-
+	<bean id="testRouteBuilder" class="com.mindtree.mwatch.test.TestRouteBuilder">
+	</bean>
 	<camel:camelContext id="defaultCamelContext">
-		<camel:routeBuilder ref="testRouteBuilder"/>
+		<camel:routeBuilder ref="testRouteBuilder" />
 	</camel:camelContext>
 
 	<bean id="RestletComponent" class="org.restlet.Component" />
